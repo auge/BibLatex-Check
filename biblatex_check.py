@@ -91,7 +91,7 @@ parser.add_option("-o", "--output", dest="htmlOutput",
                   help="HTML Output File", metavar="output.html")
 
 parser.add_option("-c", "--config", dest="config",
-                  help="HTML Output File", metavar="config.json5")
+                  help="Config file", metavar="config.json5")
 
 parser.add_option("-v", "--view", dest="view", action="store_true",
                   help="Open in Browser")
@@ -104,8 +104,8 @@ parser.add_option("-N", "--no-console", dest="no_console", action="store_true",
 auxFile = options.auxFile
 bibFile = options.bibFile
 htmlOutput = options.htmlOutput
-view = options.view
 configFile = options.config
+view = options.view
 toconsole = not options.no_console
 
 # Backporting Python 3 open(encoding="utf-8") to Python 2
