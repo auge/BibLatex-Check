@@ -131,7 +131,7 @@ else:
         return codecs.open(filename=file, mode=mode, encoding=encoding,
                     errors=errors, buffering=buffering)
 
-# Find used refernece ID's only
+# Find used reference ID's only
 usedIds = set()
 try:
     fInAux = open(auxFile, 'r', encoding="utf8")
@@ -188,7 +188,7 @@ for line in fIn:
     if line.startswith("@"):
         if currentId in usedIds or not usedIds:
             for fieldName, requiredFieldsType in requiredFields.items():
-                if fieldName == currentType.lower():
+                if fieldName == currentType:
                     if isinstance(requiredFieldsType, str):
                         currentrequiredFields = requiredFields[fieldName]
 
@@ -255,7 +255,7 @@ for line in fIn:
             counterNonUniqueId += 1
         else:
             ids.append(currentId)
-        currentType = line.split("{")[0].strip("@ ")
+        currentType = line.split("{")[0].strip("@ ").lower()
         completeEntry = line + "<br />"
     else:
         if line != "":
