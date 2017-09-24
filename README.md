@@ -11,6 +11,11 @@ The results of the check are printed to an html file, which includes links to Go
 
 Please note that it is **not a BibLaTeX validator**. And in the current version, it might not yet be able to parse every valid bib file. The software targets the specific needs of Computer Scientist, but may be applicable in other fields as well.
 
+For use in automated environments, BibLaTeX-Check returns errors on the console (can be disabled).
+Further, it returns an exit code depending on whether problems have been found.
+
+The html output is tested with Firefox and Chrome, but the current version does not properly work with Internet Explorer.
+
 ## Getting Started
 
 Just copy the file into a directory with write permission, then run the script
@@ -25,11 +30,12 @@ The html output is tested with Firefox and Chrome, but the current version does 
 
 Specify these when calling the script.
 
-- -b (--bib) Set the input Bib File
-- -a (--aux) Set the input Aux File
-- -o (--output) Set the HTML Output File
+- -b (--bib=file.bib) Set the input Bib File
+- -a (--aux=file.aux) Set the input Aux File
+- -o (--output=file.html) Write results to the HTML Output File
 - -c (--config=file.json5) Load config file
-- -v (--view) Open in Browser")
+- -v (--view) Open in Browser. Use together with -o.
+- -N (--no-console) Do not print problems to console. An exit code is always returned.
 
 ## Help
 
