@@ -24,8 +24,6 @@ Just copy the file into a directory with write permission, then run the script
 
 If you provide the additional aux file (created when compiling a tex document), then the check of the bib file is restricted to only those entries that are really cited in the tex document.
 
-The html output is tested with Firefox and Chrome, but the current version does not properly work with Internet Explorer.
-
 ## Options
 
 Specify these when calling the script.
@@ -43,7 +41,7 @@ See `./biblatex_check.py -h` for basic help.
 
 If your getting an environment error, try using `python ./biblatex_check.py` or `python3 ./biblatex_check.py` depending on your OS.
 
-##Alternatives
+## Alternatives
 
 BibLatex check is adapted from [BibTex Check](https://code.google.com/p/bibtex-check/) by Fabian Beck, which can be used to validate BibTex files.
 
